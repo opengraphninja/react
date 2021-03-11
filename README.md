@@ -26,8 +26,8 @@ $ yarn add @opengraphninja/react
 Using the React component is pretty easy:
 
 ```tsx
-import "@opengraphninja/sdk/styles.css";
-import { PreviewLink } from "@opengraphninja/sdk/react";
+import "@opengraphninja/react/styles.css";
+import { PreviewLink } from "@opengraphninja/react";
 
 export const App = () => {
   return <PreviewLink href="https://opengraph.ninja" />;
@@ -39,15 +39,18 @@ export const App = () => {
 If you want to design your own preview, you can use the React hook `usePreviewData`:
 
 ```tsx
-import { usePreviewData } from "@opengraphninja/sdk/react";
+import { usePreviewData } from "@opengraphninja/react";
 
 type Props = { href: string };
 export const SimplePreview = (props: Props) => {
-  const { title, description } = usePreviewData(props.href);
+  const previewData = usePreviewData(props.href);
+  if (previewData.status !== "success") {
+    return <p>Loading…</p>;
+  }
   return (
     <div>
-      <h2>{title}</h2>
-      <p>{description}</p>
+      <h2>{previewData.data.title}</h2>
+      <p>{previewData.data.description}</p>
     </div>
   );
 };

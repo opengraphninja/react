@@ -2,18 +2,19 @@ import * as React from "react";
 import { usePreviewData } from "./usePreviewData";
 
 type PreviewLinkProps = {
-  href: string;
+  href?: string;
 };
 /** Creates a neat looking preview of a link
  *
  * Fetches the metadata of the site, and
  */
 export const PreviewLink = ({ href }: PreviewLinkProps) => {
-  const data = usePreviewData(href);
-  if (!data) {
+  const dataStatus = usePreviewData(href);
+  if (dataStatus.status !== "success") {
     return null;
   }
-  const url = new URL(href);
+  const { data } = dataStatus;
+  const url = new URL(href!);
   return (
     <a className="ogn-container" href={href}>
       {data.image && (

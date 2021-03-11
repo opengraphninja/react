@@ -13,7 +13,7 @@ type Error = {
   error: string;
 };
 
-export const getData = async (href: string) => {
+export const getPreviewData = async (href: string) => {
   const response = await fetch(`https://opengraph.ninja/api/v1?url=${href}`);
   const body = await response.json();
   if (!response.ok) {
