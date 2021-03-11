@@ -1,0 +1,41 @@
+.ogn-container {
+  box-sizing: border-box;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  border: 1px solid currentColor;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.ogn-image {
+  object-fit: cover;
+  object-position: center center;
+  width: 100%;
+}
+.ogn-content {
+  flex: 1;
+  margin: 1em;
+}
+.ogn-title {
+  font-weight: bold;
+  margin: 0;
+  font-size: 1.1em;
+}
+.ogn-description {
+  margin: 0;
+}
+.ogn-url {
+  color: gray;
+  margin: 1em 0 0 0;
+}
+
+@media screen and (min-width: 640px) {
+  .ogn-container {
+    flex-direction: row;
+  }
+  .ogn-image {
+    width: 25%;
+    max-width: 100px;
+  }
+}
