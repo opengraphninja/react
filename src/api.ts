@@ -1,5 +1,6 @@
 export type PreviewData = {
   hostname: string;
+  requestUrl: string;
   title: string;
   description: string;
   image?: {

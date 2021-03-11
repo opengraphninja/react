@@ -15,7 +15,7 @@ export const PreviewLink = ({ href }: PreviewLinkProps) => {
   }
   const { data } = dataStatus;
   return (
-    <a className="ogn-container" href={href}>
+    <a className="ogn-container" href={data.requestUrl}>
       {data.image && (
         <img
           src={data.image.url}
