@@ -14,7 +14,6 @@ export const PreviewLink = ({ href }: PreviewLinkProps) => {
     return null;
   }
   const { data } = dataStatus;
-  const url = new URL(href!);
   return (
     <a className="ogn-container" href={href}>
       {data.image && (
@@ -27,7 +26,7 @@ export const PreviewLink = ({ href }: PreviewLinkProps) => {
       <div className="ogn-content">
         <p className="ogn-title">{data.title}</p>
         <p className="ogn-description">{data.description}</p>
-        <p className="ogn-url">{url.hostname}</p>
+        <p className="ogn-url">{data.hostname}</p>
       </div>
     </a>
   );
