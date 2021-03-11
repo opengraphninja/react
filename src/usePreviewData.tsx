@@ -21,7 +21,7 @@ export const usePreviewData = (href: string | null | undefined) => {
     api
       .getPreviewData(href)
       .then((data) => setState({ status: "success", data }))
-      .catch((e) => setState({ status: "error", error: e.message }));
+      .catch((e) => setState({ status: "error", error: e.error || e.message }));
   }, [href]);
   return state;
 };
