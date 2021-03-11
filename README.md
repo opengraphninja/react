@@ -2,6 +2,8 @@
 
 This library contains the code you need to generate nice-looking previews of stand-alone links in your React application.
 
+Read more at [opengraph.ninja](https://opengraph.ninja)
+
 ## Usage
 
 This package contains two things:
