@@ -36,6 +36,7 @@
   }
   .ogn-image {
     width: 25%;
-    max-width: 100px;
+    max-width: 150px;
+    max-height: 150px;
   }
 }
