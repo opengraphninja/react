@@ -1,3 +1,5 @@
+import { Details } from "./types";
+
 export type PreviewData = {
   hostname: string;
   requestUrl: string;
@@ -7,7 +9,7 @@ export type PreviewData = {
     url: string;
     alt?: string;
   };
-  details: object;
+  details: Details;
 };
 
 type Error = {
