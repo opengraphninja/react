@@ -23,9 +23,6 @@ jobs:
       - name: Install Dependencies
         run: npm install
 
-      - name: Set stuff as public
-        run: npm config set access public
-
       - name: Create Release Pull Request or Publish to npm
         id: changesets
         uses: changesets/action@v1
