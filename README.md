@@ -60,6 +60,11 @@ export const SimplePreview = (props: Props) => {
 
 If you're not using React, you can use the [@opengraphninja/sdk](https://github.com/opengraphninja/sdk) package instead!
 
+
+## Releasing
+
+To release a new version, push a branch and create a changeset
+
 ## Questions and feature requests?
 
 If you have questions, bug reports or feature requests, please let us know in the issues.
