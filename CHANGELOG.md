@@ -1,5 +1,11 @@
 # @opengraphninja/react
 
+## 0.2.2
+
+### Patch Changes
+
+- 05ca17d: Add support for encoded urls
+
 ## 0.2.1
 
 ### Patch Changes
