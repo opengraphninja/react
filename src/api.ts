@@ -17,7 +17,9 @@ type Error = {
 };
 
 export const getPreviewData = async (href: string) => {
-  const response = await fetch(`https://opengraph.ninja/api/v1?url=${href}`);
+  const response = await fetch(
+    `https://opengraph.ninja/api/v1?encodedUrl=${btoa(href)}`
+  );
   const body = await response.json();
   if (!response.ok) {
     throw body as Error;
